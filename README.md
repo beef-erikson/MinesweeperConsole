@@ -1,1 +1,1 @@
-"# Console App Minesweeper Game" 
+# Console App Minesweeper Game
