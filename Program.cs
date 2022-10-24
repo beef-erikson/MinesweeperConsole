@@ -1,6 +1,4 @@
-﻿using System.Text.RegularExpressions;
-
-Random rand = new();
+﻿Random rand = new();
 bool[,] isBomb;
 char ch = 'A';
 int numOfCells = 10;
