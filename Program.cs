@@ -5,7 +5,7 @@ int numOfCells = 10;
 MakeBoard(numOfCells);
 
 // User input
-Write("Enter a coordinate to check: ");
+Write("Enter a coordinate to check (i.e. A1): ");
 string? coord = ReadLine();
 
 // Parse input
