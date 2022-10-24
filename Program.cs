@@ -20,14 +20,10 @@ try
         {
             WriteLine(coord.First());
         }
-        else
-        {
-            WriteLine("Please enter a valid value, i.e. A5");
-        }
 
         coord = coord.Substring(1);
         int number = int.Parse(coord);
-        if (number > numOfCells)
+        if (number > numOfCells || number <= 0)
         {
             WriteLine("Please enter a valid value, i.e. A5");
         }
