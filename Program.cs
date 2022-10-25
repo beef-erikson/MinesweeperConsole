@@ -1,7 +1,10 @@
-﻿Random rand = new();
+﻿int numOfCells = 10;
+int numOfBombs = 10;
+
+Random rand = new();
 bool[,] isBomb;
 char ch = 'A';
-int numOfCells = 10;
+
 MakeBoard(numOfCells);
 
 // User input
@@ -42,8 +45,8 @@ catch
 /// <param name="cells">Number of cells you wish to have for the horizontal/verticle axis.</param>
 void MakeBoard(int cells)
 {
-    // Populate bombs - change value of 'cells' if you wish more or less bombs than default.
-    bool[,] isBomb = PopulateBombs(cells);
+    // Populate bombs
+    bool[,] isBomb = PopulateBombs(numOfBombs);
 
     // Populate top line with alphabet
     Write("   ");
@@ -100,13 +103,13 @@ bool[,] PopulateBombs(int bombs)
     int[] randNumbers = new int[bombs];
     for (int i = 0; i < bombs; i++)
     {
-        int bomb = rand.Next(0, bombs * 10);
+        int bomb = rand.Next(0, numOfCells * 10);
         // Check to make sure bomb location has not already been used.
         for (int j = 0; j < bombs; j++)
         {
             if (randNumbers[j] == bomb)
             {
-                bomb = rand.Next(0, bombs * 10);
+                bomb = rand.Next(0, numOfCells * 10);
                 j = 0;
             }
         }
